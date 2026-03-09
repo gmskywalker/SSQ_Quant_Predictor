@@ -7,7 +7,7 @@
 
 
 
-![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)
+![Python Version](https://img.shields.io/badge/Python-3.7%2B-blue.svg)
 
 ![Machine Learning](https://img.shields.io/badge/AI-RandomForest-orange.svg)
 
@@ -18,7 +18,7 @@
 
 
 > **放弃幻想，拥抱量化。**
-本项目彻底抛弃了传统“黑盒深度学习盲目预测白噪音”的低效方案，重构为一套**逻辑透明、多维特征融合、严格防守**的工业级“白盒”量化预测流水线。
+>本项目彻底抛弃了传统“黑盒深度学习盲目预测白噪音”的低效方案，重构为一套**逻辑透明、多维特征融合、严格防守**的工业级“白盒”量化预测流水线。
 
 
 
@@ -247,7 +247,15 @@ cd SSQ_Quant_Predictor
 
 
 
-### 📦 Step 3: 安装依赖包
+### ⚠️ 运行前必看提示
+> **🚫 请务必关闭 VPN / 梯子 / 代理软件！**
+> 本项目需要高频直连国内的“500 彩票网”拉取历史数据。如果你开启了网络代理，会导致底层网络库握手失败，引发 `ProxyError` 或 `FileNotFoundError`。
+>开启网络代理也会使pip命令报错
+> **运行前请确保处于纯净的国内直连网络环境下！**
+
+
+
+### 📦Step 3: 安装依赖包
 
 这一步相对简单，直接接着上一步操作，继续输入并回车：
 ```bash
@@ -260,8 +268,6 @@ pip install -r requirements.txt
 ### ⚡ Step 4: 一键启动流水线
 
 - **Windows 用户**：以上完成之后可以退出Anaconda,直接双击运行 `run_pipeline.bat`这个批处理程序即可，以后再次使用也是直接双击运行即可,会自动进入虚拟环境然后运行程序。
-
-> **温馨提示**：若提示 `'git' 不是内部或外部命令`，需先去官网 ([https://git-scm.com/download/win](https://git-scm.com/download/win)) 下载 64-bit 安装包，一路 Next 安装完。然后重启 Anaconda Prompt，重新执行 `conda activate lottery` 后再来一遍即可。
 
 - **Mac/Linux 用户** 以及想想体验逐步运行感觉的Windows用户：
 依次继续在终端执行以下命令：
@@ -284,7 +290,7 @@ python 03_generator.py
 
 ```
 
-如果`01_get_data.py`出现解析错误，看看网页 http://datachart.500.com/ssq/history/newinc/history.php 是否可以正常访问，这是爬虫数据来源
+> **温馨提示**：如果`01_get_data.py`出现解析错误，看看网页 http://datachart.500.com/ssq/history/newinc/history.php 是否可以正常访问，再关闭VPN和网络代理，这是爬虫数据来源
 
 执行完毕后，系统将展示优雅的控制台 UI，并在最下方提供【纯净复制版】供你直接提取 5 注预测号码！
 
