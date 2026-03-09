@@ -1,14 +1,7 @@
-# 网络爬虫与解析
 requests>=2.25.1
 beautifulsoup4>=4.9.3
 lxml>=4.6.3
-
-# 数据处理与科学计算
 pandas>=1.2.0
 numpy>=1.19.5
-
-# 机器学习与特征工程
 scikit-learn>=0.24.1
-
-# 优雅的日志输出
 loguru>=0.5.3
