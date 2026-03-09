@@ -1,0 +1,11 @@
+# Python 运行缓存
+__pycache__/
+*.pyc
+
+# 本地临时数据文件 (不要传到云端，让用户自己爬取)
+data.csv
+ai_blue_picks.txt
+
+# 虚拟环境与编辑器配置
+.vscode/
+.idea/
