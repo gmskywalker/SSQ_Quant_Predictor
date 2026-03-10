@@ -46,7 +46,7 @@ if "%found_conda%"=="0" (
     echo ❌ 致命错误：找不到您的 Anaconda/Miniconda 安装路径！
     echo -------------------------------------------------------
     echo 💡 解决办法 1：
-    echo 请右键编辑本 bat 文件，手动填入您的 activate.bat 绝对路径。
+    echo 请右键编辑本 bat 文件，手动填入您的 activate.bat 绝对路径（不会操作查询AI）。
     echo.
     echo 💡 解决办法 2（推荐小白使用）：
     echo 请从电脑的开始菜单手动打开【Anaconda Prompt】黑窗口

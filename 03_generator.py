@@ -155,6 +155,9 @@ def generate_v3_numbers():
         print(f"{clean_r} + {clean_b}")
     print("-----------------------------------\n")
 
+    print("💡 【选号建议】: 第 5 组号码是融合了动量、马尔可夫链与 AI 算力的【最佳综合策略】。")
+    print("                 如果您只打算购买一注，请直接锁定第 5 组！")
+    print("=" * 60)
 
 if __name__ == '__main__':
     generate_v3_numbers()
