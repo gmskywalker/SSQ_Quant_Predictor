@@ -31,7 +31,7 @@ for %%p in (
     "C:\anaconda3\Scripts\activate.bat"
     "C:\miniconda3\Scripts\activate.bat"
     "D:\anaconda3\Scripts\activate.bat"
-    "D:\miniconda3\Scripts\activate.bat"
+    "D:\Dev\miniconda3\Scripts\activate.bat"
 ) do (
     if exist %%p (
         call %%p %ENV_NAME%

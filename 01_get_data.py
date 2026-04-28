@@ -15,20 +15,20 @@ BASE_URL = "https://datachart.500.com/ssq/"
 
 
 def safe_request(url):
-    """
-    🛡️ 核心防盾：带 VPN 冲突检测的网络请求包装器
-    """
+    """🛡️ 核心防盾：带 VPN 冲突检测的网络请求包装器"""
     try:
-        # 强制清空 Python 运行时的代理环境变量 (防呆不防傻)
         os.environ["http_proxy"] = ""
         os.environ["https_proxy"] = ""
-
-        # 发起请求
-        r = requests.get(url, verify=False, timeout=15)
+        # 🎭 新增隐形面具：伪装成最新的 Windows Chrome 浏览器
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8"
+        }
+        r = requests.get(url, headers=headers, verify=False, timeout=15)
         r.raise_for_status()
-        r.encoding = 'gbk'  # 500彩票网是 GBK 编码
+        r.encoding = 'gbk'
         return r
-
     except Exception as e:
         error_msg = str(e)
         # 精准捕获 ProxyError 或底层的 FileNotFoundError (urllib3 代理 Bug)
